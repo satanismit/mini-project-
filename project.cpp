@@ -4,6 +4,6 @@ using namespace std;
 int main()
 {
   cout<<"helllo world !" << endl;
-  cout << "Hello Smit and Krish" << endl; // i am Brijesh 
+  cout << "Hello brijesh and Krish" << endl; // i am smit
   return 0;
 }
