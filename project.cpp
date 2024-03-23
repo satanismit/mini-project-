@@ -18,6 +18,7 @@ int main()
 char getuserchoice()
 {
   char player ;
+  cout<<"Welcome";
   cout << "Rock-Paper-Scissors Game!" << endl ;
 
   do{
