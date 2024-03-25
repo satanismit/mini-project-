@@ -3,21 +3,17 @@
                 : Rakhasiya Brijesh 
 */
 #include<iostream>
+#include<ctime>
+
 using namespace std;
 // Rock - Paper  - scissors Game 
-char  getuserchoice();
-int main()
-{
+
+class rps{
   char player , computer ;
+  public:
 
-  player = getuserchoice();
-
-  return 0;
-}
-
-char getuserchoice()
+void  userchoice()
 {
-  char player ;
   cout<<"Welcome";
   cout << "Rock-Paper-Scissors Game!" << endl ;
 
@@ -30,5 +26,41 @@ char getuserchoice()
     cin >> player ;
   }while(player !='r' && player !='p' && player !='s');
 
-  return player ;
 }
+
+void computerchoice()
+{
+   srand(time(0));
+   int num=rand()%3 +1;   //random function choose one number in range of (0,1,2)
+   switch(num)
+   {
+    case 1: 
+       computer='r';
+    case 2:
+     computer='p';
+    case 3:
+     computer='s';
+   }
+}
+ void showuserchoice()
+ {
+  cout<<"Your Choice :"<<player;
+ }
+   void showcomchoice()
+   {
+    cout<<"Computer Choice: "<<computer;
+   }
+};
+int main()
+{
+  
+   rps p;
+ p.userchoice();
+  p.showuserchoice();
+  p.computerchoice();
+  p.computerchoice();
+
+  return 0;
+}
+
+
