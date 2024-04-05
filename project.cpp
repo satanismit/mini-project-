@@ -1,18 +1,20 @@
-/* Group Leader = Satani Smit
+/* Rock - Paper  - scissors Game 
+Group Leader = Satani Smit
         members : vaghani Krish 
                 : Rakhasiya Brijesh 
 */
+
 #include<iostream>
 #include<ctime>
 
 using namespace std;
-// Rock - Paper  - scissors Game 
+
 
 class rps{
   char player , computer ;
   public:
 
-void  userchoice()
+char  getuserchoice()
 {
   cout<<"Welcome";
   cout << "Rock-Paper-Scissors Game!" << endl ;
@@ -25,41 +27,56 @@ void  userchoice()
     cout << " 's' for scissors " << endl;
     cin >> player ;
   }while(player !='r' && player !='p' && player !='s');
-
+  return  player ;
 }
 
-void computerchoice()
+char getcomputerchoice()
 {
    srand(time(0));
-   int num=rand()%3 +1;   //random function choose one number in range of (0,1,2)
+   int num =rand()%3 +1;   //random function choose one number in range of (0,1,2)
    switch(num)
    {
     case 1: 
-       computer='r';
+     return 'r' ;
     case 2:
-     computer='p';
+     return 'p' ;
     case 3:
-     computer='s';
+     return 's' ;
    }
+   return 0 ;
 }
- void showuserchoice()
- {
-  cout<<"Your Choice :"<<player;
- }
-   void showcomchoice()
-   {
-    cout<<"Computer Choice: "<<computer;
-   }
+ void showChoice(char choice){
+
+	switch(choice){
+		case 'r': std::cout << "Rock\n";
+				  break;
+		case 'p': std::cout << "Paper\n";
+				  break;
+		case 's': std::cout << "Scissors\n";
+				  break;
+	}
+}
+void chooseWinner(char choice1 , char choice2)
+{
+  
+}
+ 
 };
 int main()
 {
+
+  char player , computer ;
   
    rps p;
- p.userchoice();
-  p.showuserchoice();
-  p.computerchoice();
-  p.computerchoice();
+  player  = p.getuserchoice();
+  cout << "Your Choice : " ;
+  p.showChoice(player);
 
+  computer = p.getcomputerchoice();
+  cout << "Computer's Choice : " ;
+  p.showChoice(computer);
+
+  p.chooseWinner(player,computer);
   return 0;
 }
 
