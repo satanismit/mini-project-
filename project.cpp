@@ -56,10 +56,53 @@ char getcomputerchoice()
 				  break;
 	}
 }
-void chooseWinner(char choice1 , char choice2)
-{
-  
-}
+void compare()
+   {
+       switch(player)
+       {
+       case 'r':
+         if(computer=='r')
+         {
+             cout<<endl<<"Tie this round..";
+         }
+         else if(computer=='p')
+         {
+             cout<<endl<<"Computer win this round.";  c++;
+         }
+          else if(computer=='s')
+         {
+             cout<<endl<<"You win this round.";    u++;
+         }
+         break;
+        case 'p':
+         if(computer=='p')
+         {
+             cout<<endl<<"Tie this round..";
+         }
+         else if(computer=='s')
+         {
+             cout<<endl<<"Computer win this round.";  c++;
+         }
+          else if(computer=='r')
+         {
+             cout<<endl<<"You win this round.";   u++;
+         }
+         break;
+          case 's':
+         if(computer=='s')
+         {
+             cout<<endl<<"Tie this round..";
+         }
+         else if(computer=='r')
+         {
+             cout<<endl<<"Computer win this round.";   c++;
+         }
+          else if(computer=='p')
+         {
+             cout<<endl<<"You win this round.";  u++;
+         }
+         break;
+       }
  
 };
 int main()
@@ -76,7 +119,7 @@ int main()
   cout << "Computer's Choice : " ;
   p.showChoice(computer);
 
-  p.chooseWinner(player,computer);
+  p.compare();
   return 0;
 }
 
