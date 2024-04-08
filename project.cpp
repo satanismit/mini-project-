@@ -60,33 +60,33 @@ char getcomputerchoice()
 
 	switch(player){
 		case 'r': 	if(computer == 'r'){
-						cout << "It's a Tie!\n";
+						std::cout << "It's a tie!\n";
 					}
 					else if(computer == 'p'){
-						cout << "You Lose!\n";
+						std::cout << "You lose!\n";
 					}
 					else{
-						cout << "You Win!\n";
+						std::cout << "You win!\n";
 					}
 					break;
 		case 'p': 	if(computer == 'r'){
-						cout << "You Win!\n";
+						std::cout << "You win!\n";
 					}
 					else if(computer == 'p'){
-						cout << "It's a Tie!\n";
+						std::cout << "It's a tie!\n";
 					}
 					else{
-						cout << "You Lose!\n";
+						std::cout << "You lose!\n";
 					}
 					break;
 		case 's': 	if(computer == 'r'){
-						cout << "You Lose!\n";
+						std::cout << "You lose!\n";
 					}
 					else if(computer == 'p'){
-						cout << "You Win!\n";
+						std::cout << "You win!\n";
 					}
 					else{
-						cout << "It's a Tie!\n";
+						std::cout << "It's a tie!\n";
 					}
 					break;
 	}
