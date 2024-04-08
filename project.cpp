@@ -94,7 +94,7 @@ char getcomputerchoice()
 };
 int main()
 {
-
+	up :
   char player , computer ;
   
    rps p;
@@ -107,6 +107,24 @@ int main()
   p.showChoice(computer);
 
   p.chooseWinner(player,computer);
+
+   r :
+  char c ;
+  cout << "Do You Want to Exit ? (press Y/N)" ;
+  cin >> c ;
+
+  if(c=='y' || c=='Y')
+  {
+      cout << "*************** Game Over ************" << endl;
+  }
+  else if (c=='n' || c=='N'){
+  goto up;
+  }
+  else {
+    cout << "InValid ReEnter ..." << endl;
+    goto r;
+  }
+
   return 0;
 
 }
