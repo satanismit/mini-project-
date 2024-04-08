@@ -56,41 +56,7 @@ char getcomputerchoice()
 				  break;
 	}
 }
- void chooseWinner(char player, char computer){
-
-	switch(player){
-		case 'r': 	if(computer == 'r'){
-						cout << "It's a tie!\n";
-					}
-					else if(computer == 'p'){
-						cout << "You lose!\n";
-					}
-					else{
-						cout << "You win!\n";
-					}
-					break;
-		case 'p': 	if(computer == 'r'){
-						cout << "You win!\n";
-					}
-					else if(computer == 'p'){
-						cout << "It's a tie!\n";
-					}
-					else{
-						cout << "You lose!\n";
-					}
-					break;
-		case 's': 	if(computer == 'r'){
-						cout << "You lose!\n";
-					}
-					else if(computer == 'p'){
-						cout << "You win!\n";
-					}
-					else{
-						cout << "It's a tie!\n";
-					}
-					break;
-	}
-}
+ 
 };
 int main()
 {
@@ -106,7 +72,7 @@ int main()
   cout << "Computer's Choice : " ;
   p.showChoice(computer);
 
-  p.chooseWinner(player,computer);
+  
 
    r :
   char c ;
