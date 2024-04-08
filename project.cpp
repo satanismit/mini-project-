@@ -56,54 +56,41 @@ char getcomputerchoice()
 				  break;
 	}
 }
-void compare()
-   {
-       switch(player)
-       {
-       case 'r':
-         if(computer=='r')
-         {
-             cout<<endl<<"Tie this round..";
-         }
-         else if(computer=='p')
-         {
-             cout<<endl<<"Computer win this round.";  c++;
-         }
-          else if(computer=='s')
-         {
-             cout<<endl<<"You win this round.";    u++;
-         }
-         break;
-        case 'p':
-         if(computer=='p')
-         {
-             cout<<endl<<"Tie this round..";
-         }
-         else if(computer=='s')
-         {
-             cout<<endl<<"Computer win this round.";  c++;
-         }
-          else if(computer=='r')
-         {
-             cout<<endl<<"You win this round.";   u++;
-         }
-         break;
-          case 's':
-         if(computer=='s')
-         {
-             cout<<endl<<"Tie this round..";
-         }
-         else if(computer=='r')
-         {
-             cout<<endl<<"Computer win this round.";   c++;
-         }
-          else if(computer=='p')
-         {
-             cout<<endl<<"You win this round.";  u++;
-         }
-         break;
-       }
- 
+ void chooseWinner(char player, char computer){
+
+	switch(player){
+		case 'r': 	if(computer == 'r'){
+						cout << "It's a tie!\n";
+					}
+					else if(computer == 'p'){
+						cout << "You lose!\n";
+					}
+					else{
+						cout << "You win!\n";
+					}
+					break;
+		case 'p': 	if(computer == 'r'){
+						cout << "You win!\n";
+					}
+					else if(computer == 'p'){
+						cout << "It's a tie!\n";
+					}
+					else{
+						cout << "You lose!\n";
+					}
+					break;
+		case 's': 	if(computer == 'r'){
+						cout << "You lose!\n";
+					}
+					else if(computer == 'p'){
+						cout << "You win!\n";
+					}
+					else{
+						cout << "It's a tie!\n";
+					}
+					break;
+	}
+}
 };
 int main()
 {
@@ -119,8 +106,7 @@ int main()
   cout << "Computer's Choice : " ;
   p.showChoice(computer);
 
-  p.compare();
+  p.chooseWinner(player,computer);
   return 0;
+
 }
-
-
